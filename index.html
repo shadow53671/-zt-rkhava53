@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öztürk Hava</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <audio id="welcome-audio">
+        <source src="p_4691037_24.mp3" type="audio/mpeg">
+        Tarayıcınız ses etiketini desteklemiyor.
+    </audio>
+
+    <audio id="background-music" loop>
+        <source src="Sarı Gelin ♫ Muhteşem Fon Müziği (Enstrümantal).mp3" type="audio/mpeg">
+        Tarayıcınız ses etiketini desteklemiyor.
+    </audio>
+
+    <div class="weather-app">
+        <h1>Öztürk Hava Durumu</h1>
+        
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="İl adı girin (Örn: Ankara)" value="İstanbul">
+            <button id="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div id="loading" class="info-message hidden">Veriler yükleniyor...</div>
+        <div id="error" class="info-message hidden"></div>
+
+        <div id="weather-data" class="hidden">
+            <h2 id="location-name"></h2>
+            
+            <div class="main-info">
+                <i id="weather-icon" class="fas fa-sun"></i>
+                <div class="temperature">
+                    <span id="temp-value"></span><span class="unit">°C</span>
+                </div>
+            </div>
+
+            <div class="description" id="weather-description"></div>
+
+            <div class="details">
+                <div class="detail-item">
+                    Rüzgar Hızı: <span id="wind-speed"></span> km/s
+                </div>
+                <div class="detail-item">
+                    Nem: <span id="humidity"></span> %
+                </div>
+                <div class="detail-item">
+                    Basınç: <span id="pressure"></span> hPa
+                </div>
+                <div class="detail-item">
+                    Görünürlük: <span id="visibility"></span> km
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        Geliştirici: Erdem Öztürk
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
